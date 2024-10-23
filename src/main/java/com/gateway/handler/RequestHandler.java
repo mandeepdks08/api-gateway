@@ -10,6 +10,8 @@ public class RequestHandler implements HttpHandler {
 	private AuthenticationHandler authHandler;
 
 	private RateLimitHandler rateLimitHandler;
+	
+	private LoadBalanceHandler loadBalanceHandler;
 
 	public RequestHandler() {
 		authHandler = new AuthenticationHandler();
@@ -22,6 +24,7 @@ public class RequestHandler implements HttpHandler {
 		if (isAuthenticated) {
 			boolean isRequestAllowed = rateLimitHandler.requestAllowed(exchange);
 			if (isRequestAllowed) {
+				loadBalanceHandler.redirect(exchange);
 				rateLimitHandler.requestCompleted(exchange);
 			} else {
 
