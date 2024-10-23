@@ -1,6 +1,6 @@
 package com.gateway.manager;
 
-import javax.xml.ws.spi.http.HttpExchange;
+import com.sun.net.httpserver.HttpExchange;
 
 public interface RateLimiter {
 	public boolean requestAllowed(HttpExchange exchange);
