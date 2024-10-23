@@ -8,10 +8,14 @@ import com.sun.net.httpserver.HttpHandler;
 public class RequestHandler implements HttpHandler {
 	
 	private AuthenticationHandler authHandler;
+	
+	public RequestHandler() {
+		authHandler = new AuthenticationHandler();
+	}
 
 	@Override
 	public void handle(HttpExchange exchange) throws IOException {
-		
+		authHandler.handleAuthentication(exchange);
 		
 	}
 
