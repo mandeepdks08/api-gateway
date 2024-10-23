@@ -28,6 +28,8 @@ public class ServiceHandler {
 			} finally {
 				rateLimiter.requestCompleted(exchange);
 			}
+		} else {
+			
 		}
 	}
 
