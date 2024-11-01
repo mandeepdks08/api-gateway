@@ -1,4 +1,4 @@
-package com.gateway.manager;
+package com.gateway.ratelimiters;
 
 import com.sun.net.httpserver.HttpExchange;
 

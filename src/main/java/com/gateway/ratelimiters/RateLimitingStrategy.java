@@ -1,4 +1,4 @@
-package com.gateway.manager;
+package com.gateway.ratelimiters;
 
 public enum RateLimitingStrategy {
 	LEAKY_BUCKET {

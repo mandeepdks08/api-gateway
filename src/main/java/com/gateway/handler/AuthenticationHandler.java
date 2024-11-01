@@ -1,7 +1,7 @@
 package com.gateway.handler;
 
-import com.gateway.manager.AuthenticationManager;
-import com.gateway.manager.AuthenticationStrategy;
+import com.gateway.authmanagers.AuthenticationManager;
+import com.gateway.authmanagers.AuthenticationStrategy;
 import com.sun.net.httpserver.HttpExchange;
 
 public class AuthenticationHandler {
